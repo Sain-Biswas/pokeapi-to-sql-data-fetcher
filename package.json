@@ -1,0 +1,29 @@
+{
+  "name": "pokeapi-to-sql-data-fetcher",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A simple tool to fetch data about pokemon from pokeapi and store it in a structured sqlite database.",
+  "keywords": [
+    "pokemon"
+  ],
+  "license": "MIT",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sain-Biswas/pokeapi-to-sql-data-fetcher.git"
+  },
+  "author": {
+    "name": "Sain-Biswas",
+    "url": "https://github.com/Sain-Biswas"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.19"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
