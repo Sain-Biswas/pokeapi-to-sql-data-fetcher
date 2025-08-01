@@ -1,13 +1,17 @@
 {
-  "cSpell.words": [
-    "pokeapi"
-  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.addMissingImports.ts": "always",
+    "source.fixAll.ts": "always",
+  },
+  
+  /* Language Specific Settings */
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true,
   },
   "[markdown]": {
-    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
     "editor.quickSuggestions": {
       "comments": "off",
@@ -20,13 +24,18 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /* Code Spell Checker - Dictionary */
+  "cSpell.words": [
+    "pokeapi"
+  ],
 }
