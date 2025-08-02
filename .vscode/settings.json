@@ -36,6 +36,7 @@
 
   /* Code Spell Checker - Dictionary */
   "cSpell.words": [
+    "libsql",
     "pokeapi"
   ],
 }
