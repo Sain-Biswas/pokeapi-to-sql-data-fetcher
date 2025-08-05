@@ -1,6 +1,6 @@
 import { fetch, file } from 'bun';
 
-export default async function pokemonJsonFetcher() {
+export default async function abilityJsonFetcher() {
   try {
     const { count } = await fetch('https://pokeapi.co/api/v2/ability').then(response => response.json() as Promise<{ count: number }>);
 
@@ -15,4 +15,4 @@ export default async function pokemonJsonFetcher() {
   }
 }
 
-pokemonJsonFetcher();
+abilityJsonFetcher();
