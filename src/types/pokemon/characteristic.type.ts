@@ -6,12 +6,12 @@ export interface Characteristic {
   possible_values: number[];
 }
 
-export interface Description {
+interface Description {
   description: string;
   language: References;
 }
 
-export interface References {
+interface References {
   name: string;
   url: string;
 }
