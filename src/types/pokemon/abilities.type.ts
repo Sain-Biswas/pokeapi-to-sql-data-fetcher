@@ -2,7 +2,7 @@ export interface Ability {
   effect_changes: EffectChange[];
   effect_entries: AbilityEffectEntry[];
   flavor_text_entries: FlavorTextEntry[];
-  References: References;
+  generation: References;
   id: number;
   is_main_series: boolean;
   name: string;
