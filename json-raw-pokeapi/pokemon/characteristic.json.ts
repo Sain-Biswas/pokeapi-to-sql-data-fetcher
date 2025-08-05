@@ -6,7 +6,7 @@ export default async function characteristicJsonFetcher() {
 
     const list = await fetch(`https://pokeapi.co/api/v2/characteristic?limit=${count + 10}`).then(response => response.json() as Promise<{ results: { url: string }[] }>);
 
-    const data = await Promise.all(list.results.map(ability => fetch(ability.url).then(response => response.json())));
+    const data = await Promise.all(list.results.map(characteristic => fetch(characteristic.url).then(response => response.json())));
 
     await file('./temp/pokemon/characteristic.json').write(JSON.stringify(data));
   }

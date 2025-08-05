@@ -6,7 +6,7 @@ export default async function eggGroupJsonFetcher() {
 
     const list = await fetch(`https://pokeapi.co/api/v2/egg-group?limit=${count + 10}`).then(response => response.json() as Promise<{ results: { name: string; url: string }[] }>);
 
-    const data = await Promise.all(list.results.map(ability => fetch(ability.url).then(response => response.json())));
+    const data = await Promise.all(list.results.map(eggGroup => fetch(eggGroup.url).then(response => response.json())));
 
     await file('./temp/pokemon/egg-group.json').write(JSON.stringify(data));
   }
