@@ -6,7 +6,7 @@ export default async function encounterMethodsJsonFetcher() {
 
     const list = await fetch(`https://pokeapi.co/api/v2/encounter-method?limit=${count + 10}`).then(response => response.json() as Promise<{ results: { name: string; url: string }[] }>);
 
-    const data = await Promise.all(list.results.map(superContestEffect => fetch(superContestEffect.url).then(response => response.json())));
+    const data = await Promise.all(list.results.map(encounterMethod => fetch(encounterMethod.url).then(response => response.json())));
 
     await file('./temp/encounters/encounter-methods.json').write(JSON.stringify(data));
   }
