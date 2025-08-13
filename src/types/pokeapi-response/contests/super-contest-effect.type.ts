@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface SuperContestEffect {
   appeal: number;
   flavor_text_entries: FlavorTextEntry[];
   id: number;
-  moves: Reference[];
+  moves: NamedAPIResource[];
 }
 
 interface FlavorTextEntry {
   flavor_text: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }

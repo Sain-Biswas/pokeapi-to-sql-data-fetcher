@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Version {
   id: number;
   name: string;
   names: Name[];
-  version_group: Reference;
+  version_group: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }

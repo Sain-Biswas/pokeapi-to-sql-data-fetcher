@@ -1,8 +1,10 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Pokemon {
   abilities: Ability[];
   base_experience: number;
   cries: Cries;
-  forms: References[];
+  forms: NamedAPIResource[];
   game_indices: GameIndex[];
   height: number;
   held_items: HeldItem[];
@@ -14,7 +16,7 @@ export interface Pokemon {
   order: number;
   past_abilities: PastAbility[];
   past_types: PastType[];
-  species: References;
+  species: NamedAPIResource;
   sprites: Sprites;
   stats: Stat[];
   types: Type[];
@@ -22,14 +24,9 @@ export interface Pokemon {
 }
 
 interface Ability {
-  ability: References | null;
+  ability: NamedAPIResource | null;
   is_hidden: boolean;
   slot: number;
-}
-
-interface References {
-  name: string;
-  url: string;
 }
 
 interface Cries {
@@ -39,44 +36,44 @@ interface Cries {
 
 interface GameIndex {
   game_index: number;
-  version: References;
+  version: NamedAPIResource;
 }
 
 interface HeldItem {
-  item: References;
+  item: NamedAPIResource;
   version_details: VersionDetail[];
 }
 
 interface VersionDetail {
   rarity: number;
-  version: References;
+  version: NamedAPIResource;
 }
 
 interface Move {
-  move: References;
+  move: NamedAPIResource;
   version_group_details: VersionGroupDetail[];
 }
 
 interface VersionGroupDetail {
   level_learned_at: number;
-  move_learn_method: References;
+  move_learn_method: NamedAPIResource;
   order: number | null;
-  version_group: References;
+  version_group: NamedAPIResource;
 }
 
 interface PastAbility {
   abilities: Ability[];
-  generation: References;
+  generation: NamedAPIResource;
 }
 
 interface PastType {
-  generation: References;
+  generation: NamedAPIResource;
   types: Type[];
 }
 
 interface Type {
   slot: number;
-  type: References;
+  type: NamedAPIResource;
 }
 
 interface GenerationV {
@@ -195,5 +192,5 @@ interface GenerationViii {
 interface Stat {
   base_stat: number;
   effort: number;
-  stat: References;
+  stat: NamedAPIResource;
 }

@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface EncounterConditions {
   id: number;
   name: string;
   names: Name[];
-  values: Reference[];
+  values: NamedAPIResource[];
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }

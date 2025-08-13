@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface BerryFirmness {
-  berries: Reference[];
+  berries: NamedAPIResource[];
   id: number;
   name: string;
   names: Name[];
 }
 
-interface Reference {
-  name: string;
-  url: string;
-}
-
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

@@ -1,18 +1,18 @@
-import type { APIResource } from '../common-types.type';
+import type { APIResource, NamedAPIResource } from '../common-types.type';
 
 export interface Moves {
   accuracy: number | null;
   contest_combos: ContestCombos | null;
   contest_effect: APIResource | null;
-  contest_type: Reference | null;
-  damage_class: Reference;
+  contest_type: NamedAPIResource | null;
+  damage_class: NamedAPIResource;
   effect_chance: number | null;
   effect_changes: EffectChange[];
   effect_entries: MoveEffectEntry[];
   flavor_text_entries: FlavorTextEntry[];
-  generation: Reference;
+  generation: NamedAPIResource;
   id: number;
-  learned_by_pokemon: Reference[];
+  learned_by_pokemon: NamedAPIResource[];
   machines: Machine[];
   meta: Meta | null;
   name: string;
@@ -23,8 +23,8 @@ export interface Moves {
   priority: number;
   stat_changes: StatChange[];
   super_contest_effect: APIResource | null;
-  target: Reference;
-  type: Reference;
+  target: NamedAPIResource;
+  type: NamedAPIResource;
 }
 
 interface ContestCombos {
@@ -33,46 +33,41 @@ interface ContestCombos {
 }
 
 interface Normal {
-  use_after: Reference[] | null;
-  use_before: Reference[] | null;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  use_after: NamedAPIResource[] | null;
+  use_before: NamedAPIResource[] | null;
 }
 
 interface EffectChange {
   effect_entries: EffectChangeEffectEntry[];
-  version_group: Reference;
+  version_group: NamedAPIResource;
 }
 
 interface EffectChangeEffectEntry {
   effect: string;
-  language: Reference;
+  language: NamedAPIResource;
 }
 
 interface MoveEffectEntry {
   effect: string;
-  language: Reference;
+  language: NamedAPIResource;
   short_effect: string;
 }
 
 interface FlavorTextEntry {
   flavor_text: string;
-  language: Reference;
-  version_group: Reference;
+  language: NamedAPIResource;
+  version_group: NamedAPIResource;
 }
 
 interface Machine {
   machine: APIResource;
-  version_group: Reference;
+  version_group: NamedAPIResource;
 }
 
 interface Meta {
-  ailment: Reference;
+  ailment: NamedAPIResource;
   ailment_chance: number;
-  category: Reference;
+  category: NamedAPIResource;
   crit_rate: number;
   drain: number;
   flinch_chance: number;
@@ -85,7 +80,7 @@ interface Meta {
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }
 
@@ -95,11 +90,11 @@ interface PastValue {
   effect_entries: MoveEffectEntry[];
   power: number | null;
   pp: number | null;
-  type: Reference | null;
-  version_group: Reference;
+  type: NamedAPIResource | null;
+  version_group: NamedAPIResource;
 }
 
 interface StatChange {
   change: number;
-  stat: Reference;
+  stat: NamedAPIResource;
 }

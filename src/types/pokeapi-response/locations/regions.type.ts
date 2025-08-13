@@ -1,19 +1,16 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Regions {
   id: number;
-  locations: Reference[];
-  main_generation: Reference | null;
+  locations: NamedAPIResource[];
+  main_generation: NamedAPIResource | null;
   name: string;
   names: Name[];
-  pokedexes: Reference[];
-  version_groups: Reference[];
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  pokedexes: NamedAPIResource[];
+  version_groups: NamedAPIResource[];
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

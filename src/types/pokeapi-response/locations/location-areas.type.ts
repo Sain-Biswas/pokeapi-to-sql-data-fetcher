@@ -1,48 +1,45 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface LocationAreas {
   encounter_method_rates: EncounterMethodRate[];
   game_index: number;
   id: number;
-  location: Reference;
+  location: NamedAPIResource;
   name: string;
   names: Name[];
   pokemon_encounters: PokemonEncounter[];
 }
 
 interface EncounterMethodRate {
-  encounter_method: Reference;
+  encounter_method: NamedAPIResource;
   version_details: EncounterMethodRateVersionDetail[];
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }
 
 interface EncounterMethodRateVersionDetail {
   rate: number;
-  version: Reference;
+  version: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }
 
 interface PokemonEncounter {
-  pokemon: Reference;
+  pokemon: NamedAPIResource;
   version_details: PokemonEncounterVersionDetail[];
 }
 
 interface PokemonEncounterVersionDetail {
   encounter_details: EncounterDetail[];
   max_chance: number;
-  version: Reference;
+  version: NamedAPIResource;
 }
 
 interface EncounterDetail {
   chance: number;
-  condition_values: Reference[];
+  condition_values: NamedAPIResource[];
   max_level: number;
-  method: Reference;
+  method: NamedAPIResource;
   min_level: number;
 }

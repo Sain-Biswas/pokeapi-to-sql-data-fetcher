@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface PalParkAreas {
   id: number;
   name: string;
@@ -6,17 +8,12 @@ export interface PalParkAreas {
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }
 
 interface PokemonEncounter {
   base_score: number;
-  pokemon_species: Reference;
+  pokemon_species: NamedAPIResource;
   rate: number;
 }

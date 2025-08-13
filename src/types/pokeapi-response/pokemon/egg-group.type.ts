@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface EggGroup {
   id: number;
   name: string;
   names: Name[];
-  pokemon_species: References[];
+  pokemon_species: NamedAPIResource[];
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface References {
-  name: string;
-  url: string;
 }

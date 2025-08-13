@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface PokeathlonStat {
   affecting_natures: AffectingNatures;
   id: number;
@@ -12,15 +14,10 @@ interface AffectingNatures {
 
 interface Crease {
   max_change: number;
-  nature: References;
-}
-
-interface References {
-  name: string;
-  url: string;
+  nature: NamedAPIResource;
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }

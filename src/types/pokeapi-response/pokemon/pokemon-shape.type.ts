@@ -1,22 +1,19 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface PokemonShape {
   awesome_names: AwesomeName[];
   id: number;
   name: string;
   names: Name[];
-  pokemon_species: References[];
+  pokemon_species: NamedAPIResource[];
 }
 
 interface AwesomeName {
   awesome_name: string;
-  language: References;
-}
-
-interface References {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }

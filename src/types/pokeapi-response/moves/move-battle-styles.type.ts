@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface MoveBattleStyles {
   id: number;
   name: string;
@@ -5,11 +7,6 @@ export interface MoveBattleStyles {
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }

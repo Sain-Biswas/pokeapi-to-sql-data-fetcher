@@ -1,10 +1,12 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Type {
   damage_relations: DamageRelations;
   game_indices: GameIndex[];
-  generation: References;
+  generation: NamedAPIResource;
   id: number;
-  move_damage_class: References | null;
-  moves: References[];
+  move_damage_class: NamedAPIResource | null;
+  moves: NamedAPIResource[];
   name: string;
   names: Name[];
   past_damage_relations: PastDamageRelation[];
@@ -13,36 +15,31 @@ export interface Type {
 }
 
 interface DamageRelations {
-  double_damage_from: References[];
-  double_damage_to: References[];
-  half_damage_from: References[];
-  half_damage_to: References[];
-  no_damage_from: References[];
-  no_damage_to: References[];
-}
-
-interface References {
-  name: string;
-  url: string;
+  double_damage_from: NamedAPIResource[];
+  double_damage_to: NamedAPIResource[];
+  half_damage_from: NamedAPIResource[];
+  half_damage_to: NamedAPIResource[];
+  no_damage_from: NamedAPIResource[];
+  no_damage_to: NamedAPIResource[];
 }
 
 interface GameIndex {
   game_index: number;
-  generation: References;
+  generation: NamedAPIResource;
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }
 
 interface PastDamageRelation {
   damage_relations: DamageRelations;
-  generation: References;
+  generation: NamedAPIResource;
 }
 
 interface Pokemon {
-  pokemon: References;
+  pokemon: NamedAPIResource;
   slot: number;
 }
 

@@ -1,32 +1,29 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Nature {
-  decreased_stat: References | null;
-  hates_flavor: References | null;
+  decreased_stat: NamedAPIResource | null;
+  hates_flavor: NamedAPIResource | null;
   id: number;
-  increased_stat: References | null;
-  likes_flavor: References | null;
+  increased_stat: NamedAPIResource | null;
+  likes_flavor: NamedAPIResource | null;
   move_battle_style_preferences: MoveBattleStylePreference[];
   name: string;
   names: Name[];
   pokeathlon_stat_changes: PokeathlonStatChange[];
 }
 
-interface References {
-  name: string;
-  url: string;
-}
-
 interface MoveBattleStylePreference {
   high_hp_preference: number;
   low_hp_preference: number;
-  move_battle_style: References;
+  move_battle_style: NamedAPIResource;
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }
 
 export interface PokeathlonStatChange {
   max_change: number;
-  pokeathlon_stat: References;
+  pokeathlon_stat: NamedAPIResource;
 }

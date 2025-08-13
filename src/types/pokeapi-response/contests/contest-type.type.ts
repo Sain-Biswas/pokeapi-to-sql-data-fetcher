@@ -1,17 +1,14 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface ContestType {
-  berry_flavor: Reference;
+  berry_flavor: NamedAPIResource;
   id: number;
   name: string;
   names: Name[];
 }
 
-interface Reference {
-  name: string;
-  url: string;
-}
-
 interface Name {
   color: string;
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

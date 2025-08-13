@@ -1,21 +1,18 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Generations {
-  abilities: Reference[];
+  abilities: NamedAPIResource[];
   id: number;
-  main_region: Reference;
-  moves: Reference[];
+  main_region: NamedAPIResource;
+  moves: NamedAPIResource[];
   name: string;
   names: Name[];
-  pokemon_species: Reference[];
-  types: Reference[];
-  version_groups: Reference[];
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  pokemon_species: NamedAPIResource[];
+  types: NamedAPIResource[];
+  version_groups: NamedAPIResource[];
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

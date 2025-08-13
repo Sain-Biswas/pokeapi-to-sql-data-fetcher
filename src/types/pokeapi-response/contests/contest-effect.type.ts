@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface ContestEffect {
   appeal: number;
   effect_entries: EffectEntry[];
@@ -8,15 +10,10 @@ export interface ContestEffect {
 
 interface EffectEntry {
   effect: string;
-  language: Language;
-}
-
-interface Language {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }
 
 interface FlavorTextEntry {
   flavor_text: string;
-  language: Language;
+  language: NamedAPIResource;
 }

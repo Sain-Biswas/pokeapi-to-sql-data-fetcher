@@ -1,4 +1,4 @@
-import type { APIResource } from '../common-types.type';
+import type { APIResource, NamedAPIResource } from '../common-types.type';
 
 export interface Stat {
   affecting_moves: AffectingMoves;
@@ -7,7 +7,7 @@ export interface Stat {
   game_index: number;
   id: number;
   is_battle_only: boolean;
-  move_damage_class: References | null;
+  move_damage_class: NamedAPIResource | null;
   name: string;
   names: Name[];
 }
@@ -19,20 +19,15 @@ interface AffectingMoves {
 
 interface Crease {
   change: number;
-  move: References;
-}
-
-interface References {
-  name: string;
-  url: string;
+  move: NamedAPIResource;
 }
 
 interface AffectingNatures {
-  decrease: References[];
-  increase: References[];
+  decrease: NamedAPIResource[];
+  increase: NamedAPIResource[];
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }

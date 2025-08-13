@@ -1,22 +1,19 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface ItemAttributes {
   descriptions: Description[];
   id: number;
-  items: Reference[];
+  items: NamedAPIResource[];
   name: string;
   names: Name[];
 }
 
 interface Description {
   description: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

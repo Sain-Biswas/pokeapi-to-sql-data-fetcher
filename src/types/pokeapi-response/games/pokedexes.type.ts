@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Pokedexes {
   descriptions: Description[];
   id: number;
@@ -5,26 +7,21 @@ export interface Pokedexes {
   name: string;
   names: Name[];
   pokemon_entries: PokemonEntry[];
-  region: Reference | null;
-  version_groups: Reference[];
+  region: NamedAPIResource | null;
+  version_groups: NamedAPIResource[];
 }
 
 interface Description {
   description: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }
 
 interface PokemonEntry {
   entry_number: number;
-  pokemon_species: Reference;
+  pokemon_species: NamedAPIResource;
 }

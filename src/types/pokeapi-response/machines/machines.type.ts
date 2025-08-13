@@ -1,11 +1,8 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Machines {
   id: number;
-  item: Reference;
-  move: Reference;
-  version_group: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  item: NamedAPIResource;
+  move: NamedAPIResource;
+  version_group: NamedAPIResource;
 }

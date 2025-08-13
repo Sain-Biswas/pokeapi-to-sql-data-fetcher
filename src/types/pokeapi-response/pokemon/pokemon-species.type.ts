@@ -1,20 +1,20 @@
-import type { APIResource } from '../common-types.type';
+import type { APIResource, NamedAPIResource } from '../common-types.type';
 
 export interface PokemonSpecies {
   base_happiness: number;
   capture_rate: number;
-  color: References;
-  egg_groups: References[];
+  color: NamedAPIResource;
+  egg_groups: NamedAPIResource[];
   evolution_chain: APIResource;
-  evolves_from_species: References | null;
+  evolves_from_species: NamedAPIResource | null;
   flavor_text_entries: FlavorTextEntry[];
   form_descriptions: FormDescription[];
   forms_switchable: boolean;
   gender_rate: number;
   genera: Genus[];
-  generation: References;
-  growth_rate: References;
-  habitat: References | null;
+  generation: NamedAPIResource;
+  growth_rate: NamedAPIResource;
+  habitat: NamedAPIResource | null;
   has_gender_differences: boolean;
   hatch_counter: number;
   id: number;
@@ -26,48 +26,43 @@ export interface PokemonSpecies {
   order: number;
   pal_park_encounters: PalParkEncounter[];
   pokedex_numbers: PokedexNumber[];
-  shape: References;
+  shape: NamedAPIResource;
   varieties: Variety[];
-}
-
-interface References {
-  name: string;
-  url: string;
 }
 
 interface FlavorTextEntry {
   flavor_text: string;
-  language: References;
-  version: References;
+  language: NamedAPIResource;
+  version: NamedAPIResource;
 }
 
 interface FormDescription {
   description: string;
-  language: References;
+  language: NamedAPIResource;
 }
 
 interface Genus {
   genus: string;
-  language: References;
+  language: NamedAPIResource;
 }
 
 interface Name {
-  language: References;
+  language: NamedAPIResource;
   name: string;
 }
 
 interface PalParkEncounter {
-  area: References;
+  area: NamedAPIResource;
   base_score: number;
   rate: number;
 }
 
 interface PokedexNumber {
   entry_number: number;
-  pokedex: References;
+  pokedex: NamedAPIResource;
 }
 
 interface Variety {
   is_default: boolean;
-  pokemon: References;
+  pokemon: NamedAPIResource;
 }

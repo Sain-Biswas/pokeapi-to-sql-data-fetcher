@@ -1,15 +1,12 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface VersionGroups {
-  generation: Reference;
+  generation: NamedAPIResource;
   id: number;
-  move_learn_methods: Reference[];
+  move_learn_methods: NamedAPIResource[];
   name: string;
   order: number;
-  pokedexes: Reference[];
-  regions: Reference[];
-  versions: Reference[];
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  pokedexes: NamedAPIResource[];
+  regions: NamedAPIResource[];
+  versions: NamedAPIResource[];
 }

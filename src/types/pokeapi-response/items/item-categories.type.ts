@@ -1,17 +1,14 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface ItemCategories {
   id: number;
-  items: Reference[];
+  items: NamedAPIResource[];
   name: string;
   names: Name[];
-  pocket: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  pocket: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

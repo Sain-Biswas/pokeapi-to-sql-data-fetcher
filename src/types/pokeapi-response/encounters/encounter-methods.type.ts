@@ -1,3 +1,5 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface EncounterMethods {
   id: number;
   name: string;
@@ -6,11 +8,6 @@ export interface EncounterMethods {
 }
 
 interface NameElement {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
-}
-
-interface Reference {
-  name: string;
-  url: string;
 }

@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface MoveCategories {
   descriptions: Description[];
   id: number;
-  moves: Reference[];
+  moves: NamedAPIResource[];
   name: string;
 }
 
 interface Description {
   description: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }

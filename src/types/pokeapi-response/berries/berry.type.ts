@@ -1,24 +1,21 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface Berry {
-  firmness: Reference;
+  firmness: NamedAPIResource;
   flavors: Flavor[];
   growth_time: number;
   id: number;
-  item: Reference;
+  item: NamedAPIResource;
   max_harvest: number;
   name: string;
   natural_gift_power: number;
-  natural_gift_type: Reference;
+  natural_gift_type: NamedAPIResource;
   size: number;
   smoothness: number;
   soil_dryness: number;
 }
 
-interface Reference {
-  name: string;
-  url: string;
-}
-
 interface Flavor {
-  flavor: Reference;
+  flavor: NamedAPIResource;
   potency: number;
 }

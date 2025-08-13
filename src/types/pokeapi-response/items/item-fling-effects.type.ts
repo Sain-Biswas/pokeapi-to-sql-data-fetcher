@@ -1,16 +1,13 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface ItemFlingEffects {
   effect_entries: EffectEntry[];
   id: number;
-  items: Reference[];
+  items: NamedAPIResource[];
   name: string;
 }
 
 interface EffectEntry {
   effect: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }

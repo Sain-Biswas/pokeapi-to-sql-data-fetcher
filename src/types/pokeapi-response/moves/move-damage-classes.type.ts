@@ -1,22 +1,19 @@
+import type { NamedAPIResource } from '../common-types.type';
+
 export interface MoveDamageClasses {
   descriptions: Description[];
   id: number;
-  moves: Reference[];
+  moves: NamedAPIResource[];
   name: string;
   names: Name[];
 }
 
 interface Description {
   description: string;
-  language: Reference;
-}
-
-interface Reference {
-  name: string;
-  url: string;
+  language: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }

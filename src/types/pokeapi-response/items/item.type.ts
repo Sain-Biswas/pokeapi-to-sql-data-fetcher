@@ -1,13 +1,13 @@
-import type { APIResource } from '../common-types.type';
+import type { APIResource, NamedAPIResource } from '../common-types.type';
 
 export interface Item {
-  attributes: Reference[];
+  attributes: NamedAPIResource[];
   baby_trigger_for: APIResource | null;
-  category: Reference;
+  category: NamedAPIResource;
   cost: number;
   effect_entries: EffectEntry[];
   flavor_text_entries: FlavorTextEntry[];
-  fling_effect: Reference | null;
+  fling_effect: NamedAPIResource | null;
   fling_power: number | null;
   game_indices: GameIndex[];
   held_by_pokemon: HeldByPokemon[];
@@ -18,45 +18,40 @@ export interface Item {
   sprites: Sprites;
 }
 
-interface Reference {
-  name: string;
-  url: string;
-}
-
 interface EffectEntry {
   effect: string;
-  language: Reference;
+  language: NamedAPIResource;
   short_effect: string;
 }
 
 interface FlavorTextEntry {
-  language: Reference;
+  language: NamedAPIResource;
   text: string;
-  version_group: Reference;
+  version_group: NamedAPIResource;
 }
 
 interface GameIndex {
   game_index: number;
-  generation: Reference;
+  generation: NamedAPIResource;
 }
 
 interface HeldByPokemon {
-  pokemon: Reference;
+  pokemon: NamedAPIResource;
   version_details: VersionDetail[];
 }
 
 interface VersionDetail {
   rarity: number;
-  version: Reference;
+  version: NamedAPIResource;
 }
 
 interface Machine {
   machine: APIResource;
-  version_group: Reference;
+  version_group: NamedAPIResource;
 }
 
 interface Name {
-  language: Reference;
+  language: NamedAPIResource;
   name: string;
 }
 
