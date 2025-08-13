@@ -1,9 +1,11 @@
+import type { APIResource } from '../common-types.type';
+
 export interface PokemonSpecies {
   base_happiness: number;
   capture_rate: number;
   color: References;
   egg_groups: References[];
-  evolution_chain: EvolutionChain;
+  evolution_chain: APIResource;
   evolves_from_species: References | null;
   flavor_text_entries: FlavorTextEntry[];
   form_descriptions: FormDescription[];
@@ -30,10 +32,6 @@ export interface PokemonSpecies {
 
 interface References {
   name: string;
-  url: string;
-}
-
-interface EvolutionChain {
   url: string;
 }
 

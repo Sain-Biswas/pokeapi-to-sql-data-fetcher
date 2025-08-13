@@ -1,7 +1,9 @@
+import type { APIResource } from '../common-types.type';
+
 export interface Moves {
   accuracy: number | null;
   contest_combos: ContestCombos | null;
-  contest_effect: ContestEffect | null;
+  contest_effect: APIResource | null;
   contest_type: Reference | null;
   damage_class: Reference;
   effect_chance: number | null;
@@ -20,7 +22,7 @@ export interface Moves {
   pp: number | null;
   priority: number;
   stat_changes: StatChange[];
-  super_contest_effect: ContestEffect | null;
+  super_contest_effect: APIResource | null;
   target: Reference;
   type: Reference;
 }
@@ -37,10 +39,6 @@ interface Normal {
 
 interface Reference {
   name: string;
-  url: string;
-}
-
-interface ContestEffect {
   url: string;
 }
 
@@ -67,7 +65,7 @@ interface FlavorTextEntry {
 }
 
 interface Machine {
-  machine: ContestEffect;
+  machine: APIResource;
   version_group: Reference;
 }
 

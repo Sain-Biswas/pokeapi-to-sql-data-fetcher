@@ -1,7 +1,9 @@
+import type { APIResource } from '../common-types.type';
+
 export interface Stat {
   affecting_moves: AffectingMoves;
   affecting_natures: AffectingNatures;
-  characteristics: Characteristic[];
+  characteristics: APIResource[];
   game_index: number;
   id: number;
   is_battle_only: boolean;
@@ -10,31 +12,27 @@ export interface Stat {
   names: Name[];
 }
 
-export interface AffectingMoves {
+interface AffectingMoves {
   decrease: Crease[];
   increase: Crease[];
 }
 
-export interface Crease {
+interface Crease {
   change: number;
   move: References;
 }
 
-export interface References {
+interface References {
   name: string;
   url: string;
 }
 
-export interface AffectingNatures {
+interface AffectingNatures {
   decrease: References[];
   increase: References[];
 }
 
-export interface Characteristic {
-  url: string;
-}
-
-export interface Name {
+interface Name {
   language: References;
   name: string;
 }

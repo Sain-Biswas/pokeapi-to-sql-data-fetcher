@@ -1,6 +1,8 @@
+import type { APIResource } from '../common-types.type';
+
 export interface Item {
   attributes: Reference[];
-  baby_trigger_for: BabyTriggerFor | null;
+  baby_trigger_for: APIResource | null;
   category: Reference;
   cost: number;
   effect_entries: EffectEntry[];
@@ -18,10 +20,6 @@ export interface Item {
 
 interface Reference {
   name: string;
-  url: string;
-}
-
-interface BabyTriggerFor {
   url: string;
 }
 
@@ -53,7 +51,7 @@ interface VersionDetail {
 }
 
 interface Machine {
-  machine: BabyTriggerFor;
+  machine: APIResource;
   version_group: Reference;
 }
 
