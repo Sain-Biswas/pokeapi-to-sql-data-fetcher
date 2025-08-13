@@ -1,4 +1,4 @@
-import type { APIResource, NamedAPIResource } from '../common-types.type';
+import type { APIResource, Description, NamedAPIResource } from '../common-types.type';
 
 export interface PokemonSpecies {
   base_happiness: number;
@@ -8,7 +8,7 @@ export interface PokemonSpecies {
   evolution_chain: APIResource;
   evolves_from_species: NamedAPIResource | null;
   flavor_text_entries: FlavorTextEntry[];
-  form_descriptions: FormDescription[];
+  form_descriptions: Description[];
   forms_switchable: boolean;
   gender_rate: number;
   genera: Genus[];
@@ -34,11 +34,6 @@ interface FlavorTextEntry {
   flavor_text: string;
   language: NamedAPIResource;
   version: NamedAPIResource;
-}
-
-interface FormDescription {
-  description: string;
-  language: NamedAPIResource;
 }
 
 interface Genus {

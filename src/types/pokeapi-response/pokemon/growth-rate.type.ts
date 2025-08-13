@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Description, NamedAPIResource } from '../common-types.type';
 
 export interface GrowthRate {
   descriptions: Description[];
@@ -7,11 +7,6 @@ export interface GrowthRate {
   levels: Level[];
   name: string;
   pokemon_species: NamedAPIResource[];
-}
-
-interface Description {
-  description: string;
-  language: NamedAPIResource;
 }
 
 interface Level {

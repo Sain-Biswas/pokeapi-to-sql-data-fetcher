@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Description, NamedAPIResource } from '../common-types.type';
 
 export interface ItemAttributes {
   descriptions: Description[];
@@ -6,11 +6,6 @@ export interface ItemAttributes {
   items: NamedAPIResource[];
   name: string;
   names: Name[];
-}
-
-interface Description {
-  description: string;
-  language: NamedAPIResource;
 }
 
 interface Name {
