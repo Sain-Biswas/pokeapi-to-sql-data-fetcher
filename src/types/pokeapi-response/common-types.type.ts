@@ -11,3 +11,7 @@ export interface Description {
   description: string;
   language: NamedAPIResource;
 }
+export interface Effect {
+  effect: string;
+  language: NamedAPIResource;
+}

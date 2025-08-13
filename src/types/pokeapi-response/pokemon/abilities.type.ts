@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Effect, NamedAPIResource } from '../common-types.type';
 
 export interface Ability {
   effect_changes: EffectChange[];
@@ -13,13 +13,8 @@ export interface Ability {
 }
 
 interface EffectChange {
-  effect_entries: EffectChangeEffectEntry[];
+  effect_entries: Effect[];
   version_group: NamedAPIResource;
-}
-
-interface EffectChangeEffectEntry {
-  effect: string;
-  language: NamedAPIResource;
 }
 
 interface AbilityEffectEntry {

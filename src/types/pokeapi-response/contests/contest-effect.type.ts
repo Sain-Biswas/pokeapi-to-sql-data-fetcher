@@ -1,16 +1,11 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Effect, NamedAPIResource } from '../common-types.type';
 
 export interface ContestEffect {
   appeal: number;
-  effect_entries: EffectEntry[];
+  effect_entries: Effect[];
   flavor_text_entries: FlavorTextEntry[];
   id: number;
   jam: number;
-}
-
-interface EffectEntry {
-  effect: string;
-  language: NamedAPIResource;
 }
 
 interface FlavorTextEntry {
