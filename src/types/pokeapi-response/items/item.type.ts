@@ -1,4 +1,4 @@
-import type { APIResource, GenerationGameIndex, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
+import type { APIResource, GenerationGameIndex, MachineVersionDetail, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
 
 export interface Item {
   attributes: NamedAPIResource[];
@@ -12,7 +12,7 @@ export interface Item {
   game_indices: GenerationGameIndex[];
   held_by_pokemon: HeldByPokemon[];
   id: number;
-  machines: Machine[];
+  machines: MachineVersionDetail[];
   name: string;
   names: Name[];
   sprites: Sprites;
@@ -32,11 +32,6 @@ interface HeldByPokemon {
 interface VersionDetail {
   rarity: number;
   version: NamedAPIResource;
-}
-
-interface Machine {
-  machine: APIResource;
-  version_group: NamedAPIResource;
 }
 
 interface Name {

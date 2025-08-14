@@ -57,3 +57,8 @@ export interface GenerationGameIndex {
   game_index: number;
   generation: NamedAPIResource;
 }
+
+export interface MachineVersionDetail {
+  machine: APIResource;
+  version_group: NamedAPIResource;
+}

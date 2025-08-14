@@ -1,4 +1,4 @@
-import type { APIResource, FlavorTextVersionGroup, NamedAPIResource } from '../common-types.type';
+import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, NamedAPIResource } from '../common-types.type';
 
 export interface Moves {
   accuracy: number | null;
@@ -13,7 +13,7 @@ export interface Moves {
   generation: NamedAPIResource;
   id: number;
   learned_by_pokemon: NamedAPIResource[];
-  machines: Machine[];
+  machines: MachineVersionDetail[];
   meta: Meta | null;
   name: string;
   names: Name[];
@@ -51,11 +51,6 @@ interface MoveEffectEntry {
   effect: string;
   language: NamedAPIResource;
   short_effect: string;
-}
-
-interface Machine {
-  machine: APIResource;
-  version_group: NamedAPIResource;
 }
 
 interface Meta {
