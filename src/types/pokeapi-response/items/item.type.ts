@@ -1,4 +1,4 @@
-import type { APIResource, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
+import type { APIResource, GenerationGameIndex, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
 
 export interface Item {
   attributes: NamedAPIResource[];
@@ -9,7 +9,7 @@ export interface Item {
   flavor_text_entries: VersionGroupFlavorText[];
   fling_effect: NamedAPIResource | null;
   fling_power: number | null;
-  game_indices: GameIndex[];
+  game_indices: GenerationGameIndex[];
   held_by_pokemon: HeldByPokemon[];
   id: number;
   machines: Machine[];
@@ -22,11 +22,6 @@ interface EffectEntry {
   effect: string;
   language: NamedAPIResource;
   short_effect: string;
-}
-
-interface GameIndex {
-  game_index: number;
-  generation: NamedAPIResource;
 }
 
 interface HeldByPokemon {

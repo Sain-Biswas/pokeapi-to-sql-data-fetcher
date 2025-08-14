@@ -52,3 +52,8 @@ export interface FlavorTextVersion {
   language: NamedAPIResource;
   version: NamedAPIResource;
 }
+
+export interface GenerationGameIndex {
+  game_index: number;
+  generation: NamedAPIResource;
+}

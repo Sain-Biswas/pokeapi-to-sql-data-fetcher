@@ -36,9 +36,16 @@
 
   /* Code Spell Checker - Dictionary */
   "cSpell.words": [
+    "arceus",
+    "eevee",
+    "firered",
+    "heartgold",
+    "leafgreen",
     "libsql",
     "pokeapi",
     "pokeathlon",
-    "pokedexes"
+    "pokedexes",
+    "saphire",
+    "soulsilver"
   ],
 }

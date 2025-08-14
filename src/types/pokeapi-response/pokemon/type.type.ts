@@ -1,8 +1,8 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { GenerationGameIndex, NamedAPIResource } from '../common-types.type';
 
 export interface Type {
   damage_relations: DamageRelations;
-  game_indices: GameIndex[];
+  game_indices: GenerationGameIndex[];
   generation: NamedAPIResource;
   id: number;
   move_damage_class: NamedAPIResource | null;
@@ -21,11 +21,6 @@ interface DamageRelations {
   half_damage_to: NamedAPIResource[];
   no_damage_from: NamedAPIResource[];
   no_damage_to: NamedAPIResource[];
-}
-
-interface GameIndex {
-  game_index: number;
-  generation: NamedAPIResource;
 }
 
 interface Name {

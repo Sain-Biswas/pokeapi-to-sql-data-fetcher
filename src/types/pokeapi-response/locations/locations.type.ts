@@ -1,17 +1,12 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { GenerationGameIndex, NamedAPIResource } from '../common-types.type';
 
 export interface Locations {
   areas: NamedAPIResource[];
-  game_indices: GameIndex[];
+  game_indices: GenerationGameIndex[];
   id: number;
   name: string;
   names: Name[];
   region: NamedAPIResource | null;
-}
-
-interface GameIndex {
-  game_index: number;
-  generation: NamedAPIResource;
 }
 
 interface Name {
