@@ -1,9 +1,9 @@
-import type { Effect, NamedAPIResource } from '../common-types.type';
+import type { Effect, FlavorText, NamedAPIResource } from '../common-types.type';
 
 export interface Ability {
   effect_changes: EffectChange[];
   effect_entries: AbilityEffectEntry[];
-  flavor_text_entries: FlavorTextEntry[];
+  flavor_text_entries: FlavorText[];
   generation: NamedAPIResource;
   id: number;
   is_main_series: boolean;
@@ -21,12 +21,6 @@ interface AbilityEffectEntry {
   effect: string;
   language: NamedAPIResource;
   short_effect: string;
-}
-
-interface FlavorTextEntry {
-  flavor_text: string;
-  language: NamedAPIResource;
-  version_group: NamedAPIResource;
 }
 
 interface Name {

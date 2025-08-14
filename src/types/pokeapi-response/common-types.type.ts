@@ -29,3 +29,9 @@ export interface Encounter {
   method: NamedAPIResource;
   min_level: number;
 }
+
+export interface FlavorText {
+  flavor_text: string;
+  language: NamedAPIResource;
+  version_group: NamedAPIResource;
+}
