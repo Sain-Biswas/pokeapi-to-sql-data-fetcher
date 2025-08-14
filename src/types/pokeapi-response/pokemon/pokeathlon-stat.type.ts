@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface PokeathlonStat {
   affecting_natures: AffectingNatures;
@@ -15,9 +15,4 @@ interface AffectingNatures {
 interface Crease {
   max_change: number;
   nature: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

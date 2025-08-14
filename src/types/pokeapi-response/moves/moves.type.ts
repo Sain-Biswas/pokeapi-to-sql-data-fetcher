@@ -1,4 +1,4 @@
-import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, NamedAPIResource } from '../common-types.type';
+import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Moves {
   accuracy: number | null;
@@ -66,11 +66,6 @@ interface Meta {
   min_hits: number | null;
   min_turns: number | null;
   stat_chance: number;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface PastValue {

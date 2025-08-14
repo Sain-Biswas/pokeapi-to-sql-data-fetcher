@@ -1,4 +1,4 @@
-import type { Description, NamedAPIResource } from '../common-types.type';
+import type { Description, Name, NamedAPIResource } from '../common-types.type';
 
 export interface MoveTargets {
   descriptions: Description[];
@@ -6,9 +6,4 @@ export interface MoveTargets {
   moves: NamedAPIResource[];
   name: string;
   names: Name[];
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

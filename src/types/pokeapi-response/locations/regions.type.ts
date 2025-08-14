@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface Regions {
   id: number;
@@ -8,9 +8,4 @@ export interface Regions {
   names: Name[];
   pokedexes: NamedAPIResource[];
   version_groups: NamedAPIResource[];
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

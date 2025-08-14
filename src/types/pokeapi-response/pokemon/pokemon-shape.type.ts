@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface PokemonShape {
   awesome_names: AwesomeName[];
@@ -11,9 +11,4 @@ export interface PokemonShape {
 interface AwesomeName {
   awesome_name: string;
   language: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

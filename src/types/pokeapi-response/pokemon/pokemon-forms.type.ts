@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface PokemonForms {
   form_name: string;
@@ -15,11 +15,6 @@ export interface PokemonForms {
   sprites: Sprites;
   types: Type[];
   version_group: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface Sprites {

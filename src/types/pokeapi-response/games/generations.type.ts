@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface Generations {
   abilities: NamedAPIResource[];
@@ -10,9 +10,4 @@ export interface Generations {
   pokemon_species: NamedAPIResource[];
   types: NamedAPIResource[];
   version_groups: NamedAPIResource[];
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

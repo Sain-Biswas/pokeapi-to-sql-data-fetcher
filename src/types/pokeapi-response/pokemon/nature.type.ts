@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface Nature {
   decreased_stat: NamedAPIResource | null;
@@ -16,11 +16,6 @@ interface MoveBattleStylePreference {
   high_hp_preference: number;
   low_hp_preference: number;
   move_battle_style: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 export interface PokeathlonStatChange {

@@ -1,4 +1,4 @@
-import type { APIResource, Description, FlavorTextVersion, NamedAPIResource } from '../common-types.type';
+import type { APIResource, Description, FlavorTextVersion, Name, NamedAPIResource } from '../common-types.type';
 
 export interface PokemonSpecies {
   base_happiness: number;
@@ -33,11 +33,6 @@ export interface PokemonSpecies {
 interface Genus {
   genus: string;
   language: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface PalParkEncounter {

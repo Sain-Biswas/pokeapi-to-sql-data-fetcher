@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface ItemCategories {
   id: number;
@@ -6,9 +6,4 @@ export interface ItemCategories {
   name: string;
   names: Name[];
   pocket: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

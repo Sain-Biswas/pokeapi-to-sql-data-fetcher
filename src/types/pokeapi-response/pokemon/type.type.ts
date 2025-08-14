@@ -1,4 +1,4 @@
-import type { GenerationGameIndex, NamedAPIResource } from '../common-types.type';
+import type { GenerationGameIndex, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Type {
   damage_relations: DamageRelations;
@@ -21,11 +21,6 @@ interface DamageRelations {
   half_damage_to: NamedAPIResource[];
   no_damage_from: NamedAPIResource[];
   no_damage_to: NamedAPIResource[];
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface PastDamageRelation {

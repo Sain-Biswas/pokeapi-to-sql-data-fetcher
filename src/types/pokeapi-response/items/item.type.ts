@@ -1,4 +1,4 @@
-import type { APIResource, GenerationGameIndex, MachineVersionDetail, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
+import type { APIResource, GenerationGameIndex, MachineVersionDetail, Name, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
 
 export interface Item {
   attributes: NamedAPIResource[];
@@ -32,11 +32,6 @@ interface HeldByPokemon {
 interface VersionDetail {
   rarity: number;
   version: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface Sprites {

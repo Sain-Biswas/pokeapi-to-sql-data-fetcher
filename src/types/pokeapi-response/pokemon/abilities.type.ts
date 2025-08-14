@@ -1,4 +1,4 @@
-import type { Effect, FlavorTextVersionGroup, NamedAPIResource } from '../common-types.type';
+import type { Effect, FlavorTextVersionGroup, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Ability {
   effect_changes: EffectChange[];
@@ -21,11 +21,6 @@ interface AbilityEffectEntry {
   effect: string;
   language: NamedAPIResource;
   short_effect: string;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface Pokemon {

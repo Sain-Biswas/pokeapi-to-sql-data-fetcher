@@ -1,4 +1,4 @@
-import type { NamedAPIResource, VersionEncounterDetail } from '../common-types.type';
+import type { Name, NamedAPIResource, VersionEncounterDetail } from '../common-types.type';
 
 export interface LocationAreas {
   encounter_method_rates: EncounterMethodRate[];
@@ -18,11 +18,6 @@ interface EncounterMethodRate {
 interface EncounterMethodRateVersionDetail {
   rate: number;
   version: NamedAPIResource;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
 
 interface PokemonEncounter {

@@ -1,4 +1,4 @@
-import type { APIResource, NamedAPIResource } from '../common-types.type';
+import type { APIResource, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Stat {
   affecting_moves: AffectingMoves;
@@ -25,9 +25,4 @@ interface Crease {
 interface AffectingNatures {
   decrease: NamedAPIResource[];
   increase: NamedAPIResource[];
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }

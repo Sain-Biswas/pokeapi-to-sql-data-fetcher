@@ -62,3 +62,8 @@ export interface MachineVersionDetail {
   machine: APIResource;
   version_group: NamedAPIResource;
 }
+
+export interface Name {
+  language: NamedAPIResource;
+  name: string;
+}

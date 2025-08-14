@@ -1,4 +1,4 @@
-import type { NamedAPIResource } from '../common-types.type';
+import type { Name, NamedAPIResource } from '../common-types.type';
 
 export interface BerryFlavor {
   berries: Berry[];
@@ -11,9 +11,4 @@ export interface BerryFlavor {
 interface Berry {
   berry: NamedAPIResource;
   potency: number;
-}
-
-interface Name {
-  language: NamedAPIResource;
-  name: string;
 }
