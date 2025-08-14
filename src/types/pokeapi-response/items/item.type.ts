@@ -1,4 +1,4 @@
-import type { APIResource, NamedAPIResource } from '../common-types.type';
+import type { APIResource, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
 
 export interface Item {
   attributes: NamedAPIResource[];
@@ -6,7 +6,7 @@ export interface Item {
   category: NamedAPIResource;
   cost: number;
   effect_entries: EffectEntry[];
-  flavor_text_entries: FlavorTextEntry[];
+  flavor_text_entries: VersionGroupFlavorText[];
   fling_effect: NamedAPIResource | null;
   fling_power: number | null;
   game_indices: GameIndex[];
@@ -22,12 +22,6 @@ interface EffectEntry {
   effect: string;
   language: NamedAPIResource;
   short_effect: string;
-}
-
-interface FlavorTextEntry {
-  language: NamedAPIResource;
-  text: string;
-  version_group: NamedAPIResource;
 }
 
 interface GameIndex {

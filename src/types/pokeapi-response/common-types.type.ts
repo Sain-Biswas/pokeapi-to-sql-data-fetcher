@@ -33,5 +33,22 @@ export interface Encounter {
 export interface FlavorText {
   flavor_text: string;
   language: NamedAPIResource;
+}
+
+export interface FlavorTextVersionGroup {
+  flavor_text: string;
+  language: NamedAPIResource;
   version_group: NamedAPIResource;
+}
+
+export interface VersionGroupFlavorText {
+  text: string;
+  language: NamedAPIResource;
+  version_group: NamedAPIResource;
+}
+
+export interface FlavorTextVersion {
+  flavor_text: string;
+  language: NamedAPIResource;
+  version: NamedAPIResource;
 }
