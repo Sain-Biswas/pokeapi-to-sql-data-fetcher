@@ -1,6 +1,6 @@
 import type { Description, Name, NamedAPIResource } from '../common-types.type';
 
-export interface MoveDamageClasses {
+export interface MoveDamageClass {
   descriptions: Description[];
   id: number;
   moves: NamedAPIResource[];

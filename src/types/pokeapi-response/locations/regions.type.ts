@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface Regions {
+export interface Region {
   id: number;
   locations: NamedAPIResource[];
   main_generation: NamedAPIResource | null;

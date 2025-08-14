@@ -10,24 +10,24 @@ export interface Item {
   fling_effect: NamedAPIResource | null;
   fling_power: number | null;
   game_indices: GenerationGameIndex[];
-  held_by_pokemon: HeldByPokemon[];
+  held_by_pokemon: ItemHolderPokemon[];
   id: number;
   machines: MachineVersionDetail[];
   name: string;
   names: Name[];
-  sprites: Sprites;
+  sprites: ItemSprites;
 }
 
-interface HeldByPokemon {
+interface ItemHolderPokemon {
   pokemon: NamedAPIResource;
-  version_details: VersionDetail[];
+  version_details: ItemHolderPokemonVersionDetail[];
 }
 
-interface VersionDetail {
+interface ItemHolderPokemonVersionDetail {
   rarity: number;
   version: NamedAPIResource;
 }
 
-interface Sprites {
+interface ItemSprites {
   default: null | string;
 }

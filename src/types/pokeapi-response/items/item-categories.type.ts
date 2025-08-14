@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface ItemCategories {
+export interface ItemCategory {
   id: number;
   items: NamedAPIResource[];
   name: string;

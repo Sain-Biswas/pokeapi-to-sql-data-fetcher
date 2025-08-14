@@ -1,8 +1,8 @@
 import type { APIResource, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Stat {
-  affecting_moves: AffectingMoves;
-  affecting_natures: AffectingNatures;
+  affecting_moves: MoveStatAffectSets;
+  affecting_natures: NatureStatAffectSets;
   characteristics: APIResource[];
   game_index: number;
   id: number;
@@ -12,17 +12,17 @@ export interface Stat {
   names: Name[];
 }
 
-interface AffectingMoves {
-  decrease: Crease[];
-  increase: Crease[];
+interface MoveStatAffectSets {
+  decrease: MoveStatAffect[];
+  increase: MoveStatAffect[];
 }
 
-interface Crease {
+interface MoveStatAffect {
   change: number;
   move: NamedAPIResource;
 }
 
-interface AffectingNatures {
+interface NatureStatAffectSets {
   decrease: NamedAPIResource[];
   increase: NamedAPIResource[];
 }

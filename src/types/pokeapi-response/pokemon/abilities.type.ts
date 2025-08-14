@@ -1,4 +1,4 @@
-import type { Effect, FlavorTextVersionGroup, Name, NamedAPIResource, VerboseEffect } from '../common-types.type';
+import type { EffectChange, FlavorTextVersionGroup, Name, NamedAPIResource, VerboseEffect } from '../common-types.type';
 
 export interface Ability {
   effect_changes: EffectChange[];
@@ -9,15 +9,10 @@ export interface Ability {
   is_main_series: boolean;
   name: string;
   names: Name[];
-  pokemon: Pokemon[];
+  pokemon: AbilityPokemon[];
 }
 
-interface EffectChange {
-  effect_entries: Effect[];
-  version_group: NamedAPIResource;
-}
-
-interface Pokemon {
+interface AbilityPokemon {
   is_hidden: boolean;
   pokemon: NamedAPIResource;
   slot: number;

@@ -1,6 +1,6 @@
 import type { Effect, NamedAPIResource } from '../common-types.type';
 
-export interface ItemFlingEffects {
+export interface ItemFlingEffect {
   effect_entries: Effect[];
   id: number;
   items: NamedAPIResource[];

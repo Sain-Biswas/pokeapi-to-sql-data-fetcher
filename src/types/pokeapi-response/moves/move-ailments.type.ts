@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface MoveAilments {
+export interface MoveAilment {
   id: number;
   moves: NamedAPIResource[];
   name: string;

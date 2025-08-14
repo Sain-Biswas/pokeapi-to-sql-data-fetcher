@@ -1,6 +1,6 @@
 import type { Description, Name, NamedAPIResource } from '../common-types.type';
 
-export interface Pokedexes {
+export interface Pokedex {
   descriptions: Description[];
   id: number;
   is_main_series: boolean;

@@ -1,14 +1,14 @@
 import type { NamedAPIResource } from '../common-types.type';
 
-export interface EvolutionChains {
+export interface EvolutionChain {
   baby_trigger_item: NamedAPIResource | null;
-  chain: Chain;
+  chain: ChainLink;
   id: number;
 }
 
-interface Chain {
+interface ChainLink {
   evolution_details: EvolutionDetail[];
-  evolves_to: Chain[];
+  evolves_to: ChainLink[];
   is_baby: boolean;
   species: NamedAPIResource;
 }

@@ -1,8 +1,8 @@
-import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, Name, NamedAPIResource, VerboseEffect } from '../common-types.type';
+import type { APIResource, EffectChange, FlavorTextVersionGroup, MachineVersionDetail, Name, NamedAPIResource, VerboseEffect } from '../common-types.type';
 
-export interface Moves {
+export interface Move {
   accuracy: number | null;
-  contest_combos: ContestCombos | null;
+  contest_combos: ContestComboSets | null;
   contest_effect: APIResource | null;
   contest_type: NamedAPIResource | null;
   damage_class: NamedAPIResource;
@@ -14,40 +14,30 @@ export interface Moves {
   id: number;
   learned_by_pokemon: NamedAPIResource[];
   machines: MachineVersionDetail[];
-  meta: Meta | null;
+  meta: MoveMetaData | null;
   name: string;
   names: Name[];
-  past_values: PastValue[];
+  past_values: PastMoveStatValues[];
   power: number | null;
   pp: number | null;
   priority: number;
-  stat_changes: StatChange[];
+  stat_changes: MoveStatChange[];
   super_contest_effect: APIResource | null;
   target: NamedAPIResource;
   type: NamedAPIResource;
 }
 
-interface ContestCombos {
-  normal: Normal;
-  super: Normal;
+interface ContestComboSets {
+  normal: ContestComboDetail;
+  super: ContestComboDetail;
 }
 
-interface Normal {
+interface ContestComboDetail {
   use_after: NamedAPIResource[] | null;
   use_before: NamedAPIResource[] | null;
 }
 
-interface EffectChange {
-  effect_entries: EffectChangeEffectEntry[];
-  version_group: NamedAPIResource;
-}
-
-interface EffectChangeEffectEntry {
-  effect: string;
-  language: NamedAPIResource;
-}
-
-interface Meta {
+interface MoveMetaData {
   ailment: NamedAPIResource;
   ailment_chance: number;
   category: NamedAPIResource;
@@ -62,7 +52,7 @@ interface Meta {
   stat_chance: number;
 }
 
-interface PastValue {
+interface PastMoveStatValues {
   accuracy: number | null;
   effect_chance: number | null;
   effect_entries: VerboseEffect[];
@@ -72,7 +62,7 @@ interface PastValue {
   version_group: NamedAPIResource;
 }
 
-interface StatChange {
+interface MoveStatChange {
   change: number;
   stat: NamedAPIResource;
 }

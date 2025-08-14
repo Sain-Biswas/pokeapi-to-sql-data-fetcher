@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface EncounterConditionValues {
+export interface EncounterConditionValue {
   condition: NamedAPIResource;
   id: number;
   name: string;

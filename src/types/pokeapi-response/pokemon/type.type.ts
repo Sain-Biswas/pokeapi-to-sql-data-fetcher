@@ -1,7 +1,7 @@
 import type { GenerationGameIndex, Name, NamedAPIResource } from '../common-types.type';
 
 export interface Type {
-  damage_relations: DamageRelations;
+  damage_relations: TypeRelations;
   game_indices: GenerationGameIndex[];
   generation: NamedAPIResource;
   id: number;
@@ -9,12 +9,12 @@ export interface Type {
   moves: NamedAPIResource[];
   name: string;
   names: Name[];
-  past_damage_relations: PastDamageRelation[];
-  pokemon: Pokemon[];
-  sprites: Sprites;
+  past_damage_relations: TypeRelationsPast[];
+  pokemon: TypePokemon[];
+  sprites: TypeSprites;
 }
 
-interface DamageRelations {
+interface TypeRelations {
   double_damage_from: NamedAPIResource[];
   double_damage_to: NamedAPIResource[];
   half_damage_from: NamedAPIResource[];
@@ -23,61 +23,61 @@ interface DamageRelations {
   no_damage_to: NamedAPIResource[];
 }
 
-interface PastDamageRelation {
-  damage_relations: DamageRelations;
+interface TypeRelationsPast {
+  damage_relations: TypeRelations;
   generation: NamedAPIResource;
 }
 
-interface Pokemon {
+interface TypePokemon {
   pokemon: NamedAPIResource;
   slot: number;
 }
 
-interface Sprites {
-  'generation-iii': GenerationIii;
-  'generation-iv': GenerationIv;
-  'generation-ix': GenerationIx;
-  'generation-v': GenerationV;
-  'generation-vi': Record<string, Colosseum>;
-  'generation-vii': GenerationVii;
-  'generation-viii': GenerationViii;
+interface TypeSprites {
+  'generation-iii': TypeGenerationIII;
+  'generation-iv': TypeGenerationIV;
+  'generation-ix': TypeGenerationIX;
+  'generation-v': TypeGenerationV;
+  'generation-vi': Record<string, TypeColosseum>;
+  'generation-vii': TypeGenerationVII;
+  'generation-viii': TypeGenerationVIII;
 }
 
-interface GenerationIii {
-  'colosseum': Colosseum;
-  'emerald': Colosseum;
-  'firered-leafgreen': Colosseum;
-  'ruby-saphire': Colosseum;
-  'xd': Colosseum;
+interface TypeGenerationIII {
+  'colosseum': TypeColosseum;
+  'emerald': TypeColosseum;
+  'firered-leafgreen': TypeColosseum;
+  'ruby-saphire': TypeColosseum;
+  'xd': TypeColosseum;
 }
 
-interface Colosseum {
+interface TypeColosseum {
   name_icon: null | string;
 }
 
-interface GenerationIv {
-  'diamond-pearl': Colosseum;
-  'heartgold-soulsilver': Colosseum;
-  'platinum': Colosseum;
+interface TypeGenerationIV {
+  'diamond-pearl': TypeColosseum;
+  'heartgold-soulsilver': TypeColosseum;
+  'platinum': TypeColosseum;
 }
 
-interface GenerationIx {
-  'scarlet-violet': Colosseum;
+interface TypeGenerationV {
+  'black-2-white-2': TypeColosseum;
+  'black-white': TypeColosseum;
 }
 
-interface GenerationV {
-  'black-2-white-2': Colosseum;
-  'black-white': Colosseum;
+interface TypeGenerationVII {
+  'lets-go-pikachu-lets-go-eevee': TypeColosseum;
+  'sun-moon': TypeColosseum;
+  'ultra-sun-ultra-moon': TypeColosseum;
 }
 
-interface GenerationVii {
-  'lets-go-pikachu-lets-go-eevee': Colosseum;
-  'sun-moon': Colosseum;
-  'ultra-sun-ultra-moon': Colosseum;
+interface TypeGenerationVIII {
+  'brilliant-diamond-and-shining-pearl': TypeColosseum;
+  'legends-arceus': TypeColosseum;
+  'sword-shield': TypeColosseum;
 }
 
-interface GenerationViii {
-  'brilliant-diamond-and-shining-pearl': Colosseum;
-  'legends-arceus': Colosseum;
-  'sword-shield': Colosseum;
+interface TypeGenerationIX {
+  'scarlet-violet': TypeColosseum;
 }

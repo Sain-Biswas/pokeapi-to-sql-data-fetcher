@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface ItemPockets {
+export interface ItemPocket {
   categories: NamedAPIResource[];
   id: number;
   name: string;

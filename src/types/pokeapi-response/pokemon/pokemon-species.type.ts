@@ -24,10 +24,10 @@ export interface PokemonSpecies {
   name: string;
   names: Name[];
   order: number;
-  pal_park_encounters: PalParkEncounter[];
-  pokedex_numbers: PokedexNumber[];
+  pal_park_encounters: PalParkEncounterArea[];
+  pokedex_numbers: PokemonSpeciesDexEntry[];
   shape: NamedAPIResource;
-  varieties: Variety[];
+  varieties: PokemonSpeciesVariety[];
 }
 
 interface Genus {
@@ -35,18 +35,18 @@ interface Genus {
   language: NamedAPIResource;
 }
 
-interface PalParkEncounter {
+interface PalParkEncounterArea {
   area: NamedAPIResource;
   base_score: number;
   rate: number;
 }
 
-interface PokedexNumber {
+interface PokemonSpeciesDexEntry {
   entry_number: number;
   pokedex: NamedAPIResource;
 }
 
-interface Variety {
+interface PokemonSpeciesVariety {
   is_default: boolean;
   pokemon: NamedAPIResource;
 }

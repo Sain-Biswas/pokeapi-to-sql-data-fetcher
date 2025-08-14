@@ -1,6 +1,6 @@
 import type { NamedAPIResource } from '../common-types.type';
 
-export interface Machines {
+export interface Machine {
   id: number;
   item: NamedAPIResource;
   move: NamedAPIResource;

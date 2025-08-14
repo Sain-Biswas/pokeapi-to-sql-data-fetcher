@@ -4,10 +4,10 @@ export interface ContestType {
   berry_flavor: NamedAPIResource;
   id: number;
   name: string;
-  names: Name[];
+  names: ContestName[];
 }
 
-interface Name {
+interface ContestName {
   color: string;
   language: NamedAPIResource;
   name: string;

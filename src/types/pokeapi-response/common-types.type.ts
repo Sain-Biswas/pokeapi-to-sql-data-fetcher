@@ -16,6 +16,11 @@ export interface Effect {
   language: NamedAPIResource;
 }
 
+export interface EffectChange {
+  effect_entries: Effect[];
+  version_group: NamedAPIResource;
+}
+
 export interface Encounter {
   chance: number;
   condition_values: NamedAPIResource[];

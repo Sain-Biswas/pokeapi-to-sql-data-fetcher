@@ -4,12 +4,12 @@ export interface GrowthRate {
   descriptions: Description[];
   formula: string;
   id: number;
-  levels: Level[];
+  levels: GrowthRateExperienceLevel[];
   name: string;
   pokemon_species: NamedAPIResource[];
 }
 
-interface Level {
+interface GrowthRateExperienceLevel {
   experience: number;
   level: number;
 }

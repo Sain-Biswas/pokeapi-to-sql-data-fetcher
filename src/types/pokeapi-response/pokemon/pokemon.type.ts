@@ -1,110 +1,88 @@
 import type { NamedAPIResource } from '../common-types.type';
 
 export interface Pokemon {
-  abilities: Ability[];
+  abilities: PokemonAbility[];
   base_experience: number;
-  cries: Cries;
+  cries: PokemonCries;
   forms: NamedAPIResource[];
-  game_indices: GameIndex[];
+  game_indices: VersionGameIndex[];
   height: number;
-  held_items: HeldItem[];
+  held_items: PokemonHeldItem[];
   id: number;
   is_default: boolean;
   location_area_encounters: string;
-  moves: Move[];
+  moves: PokemonMove[];
   name: string;
   order: number;
-  past_abilities: PastAbility[];
-  past_types: PastType[];
+  past_abilities: PokemonAbilityPast[];
+  past_types: PokemonTypePast[];
   species: NamedAPIResource;
-  sprites: Sprites;
-  stats: Stat[];
-  types: Type[];
+  sprites: PokemonSprites;
+  stats: PokemonStat[];
+  types: PokemonType[];
   weight: number;
 }
 
-interface Ability {
+interface PokemonAbility {
   ability: NamedAPIResource | null;
   is_hidden: boolean;
   slot: number;
 }
 
-interface Cries {
+interface PokemonCries {
   latest: string;
   legacy: null | string;
 }
 
-interface GameIndex {
+interface VersionGameIndex {
   game_index: number;
   version: NamedAPIResource;
 }
 
-interface HeldItem {
+interface PokemonHeldItem {
   item: NamedAPIResource;
-  version_details: VersionDetail[];
+  version_details: PokemonHeldItemVersion[];
 }
 
-interface VersionDetail {
+interface PokemonHeldItemVersion {
   rarity: number;
   version: NamedAPIResource;
 }
 
-interface Move {
+interface PokemonMove {
   move: NamedAPIResource;
-  version_group_details: VersionGroupDetail[];
+  version_group_details: PokemonMoveVersion[];
 }
 
-interface VersionGroupDetail {
+interface PokemonMoveVersion {
   level_learned_at: number;
   move_learn_method: NamedAPIResource;
   order: number | null;
   version_group: NamedAPIResource;
 }
 
-interface PastAbility {
-  abilities: Ability[];
+interface PokemonAbilityPast {
+  abilities: PokemonAbility[];
   generation: NamedAPIResource;
 }
 
-interface PastType {
+interface PokemonTypePast {
   generation: NamedAPIResource;
-  types: Type[];
+  types: PokemonType[];
 }
 
-interface Type {
+interface PokemonType {
   slot: number;
   type: NamedAPIResource;
 }
 
-interface GenerationV {
-  'black-white': Sprites;
+interface PokemonStat {
+  base_stat: number;
+  effort: number;
+  stat: NamedAPIResource;
 }
 
-interface GenerationIv {
-  'diamond-pearl': Sprites;
-  'heartgold-soulsilver': Sprites;
-  'platinum': Sprites;
-}
-
-interface Versions {
-  'generation-i': GenerationI;
-  'generation-ii': GenerationIi;
-  'generation-iii': GenerationIii;
-  'generation-iv': GenerationIv;
-  'generation-v': GenerationV;
-  'generation-vi': Record<string, Home>;
-  'generation-vii': GenerationVii;
-  'generation-viii': GenerationViii;
-}
-
-interface Other {
-  'dream_world': DreamWorld;
-  'home': Home;
-  'official-artwork': OfficialArtwork;
-  'showdown': Sprites;
-}
-
-interface Sprites {
+interface PokemonSprites {
   back_default: null | string;
   back_female: null | string;
   back_shiny: null | string;
@@ -115,7 +93,7 @@ interface Sprites {
   front_shiny_female: null | string;
   other?: Other;
   versions?: Versions;
-  animated?: Sprites;
+  animated?: PokemonSprites;
 }
 
 interface GenerationI {
@@ -189,8 +167,30 @@ interface GenerationViii {
   icons: DreamWorld;
 }
 
-interface Stat {
-  base_stat: number;
-  effort: number;
-  stat: NamedAPIResource;
+interface GenerationV {
+  'black-white': PokemonSprites;
+}
+
+interface GenerationIv {
+  'diamond-pearl': PokemonSprites;
+  'heartgold-soulsilver': PokemonSprites;
+  'platinum': PokemonSprites;
+}
+
+interface Versions {
+  'generation-i': GenerationI;
+  'generation-ii': GenerationIi;
+  'generation-iii': GenerationIii;
+  'generation-iv': GenerationIv;
+  'generation-v': GenerationV;
+  'generation-vi': Record<string, Home>;
+  'generation-vii': GenerationVii;
+  'generation-viii': GenerationViii;
+}
+
+interface Other {
+  'dream_world': DreamWorld;
+  'home': Home;
+  'official-artwork': OfficialArtwork;
+  'showdown': PokemonSprites;
 }

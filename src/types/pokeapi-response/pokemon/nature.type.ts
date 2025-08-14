@@ -9,7 +9,7 @@ export interface Nature {
   move_battle_style_preferences: MoveBattleStylePreference[];
   name: string;
   names: Name[];
-  pokeathlon_stat_changes: PokeathlonStatChange[];
+  pokeathlon_stat_changes: NatureStatChange[];
 }
 
 interface MoveBattleStylePreference {
@@ -18,7 +18,7 @@ interface MoveBattleStylePreference {
   move_battle_style: NamedAPIResource;
 }
 
-export interface PokeathlonStatChange {
+export interface NatureStatChange {
   max_change: number;
   pokeathlon_stat: NamedAPIResource;
 }

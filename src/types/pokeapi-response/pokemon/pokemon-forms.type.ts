@@ -12,12 +12,12 @@ export interface PokemonForms {
   names: Name[];
   order: number;
   pokemon: NamedAPIResource;
-  sprites: Sprites;
-  types: Type[];
+  sprites: PokemonFormSprites;
+  types: PokemonFormType[];
   version_group: NamedAPIResource;
 }
 
-interface Sprites {
+interface PokemonFormSprites {
   back_default: null | string;
   back_female: null | string;
   back_shiny: null | string;
@@ -28,7 +28,7 @@ interface Sprites {
   front_shiny_female: null | string;
 }
 
-interface Type {
+interface PokemonFormType {
   slot: number;
   type: NamedAPIResource;
 }

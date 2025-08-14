@@ -1,13 +1,13 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface PalParkAreas {
+export interface PalParkArea {
   id: number;
   name: string;
   names: Name[];
-  pokemon_encounters: PokemonEncounter[];
+  pokemon_encounters: PalParkEncounterSpecies[];
 }
 
-interface PokemonEncounter {
+interface PalParkEncounterSpecies {
   base_score: number;
   pokemon_species: NamedAPIResource;
   rate: number;

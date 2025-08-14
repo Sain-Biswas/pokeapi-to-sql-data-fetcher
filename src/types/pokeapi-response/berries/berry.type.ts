@@ -2,7 +2,7 @@ import type { NamedAPIResource } from '../common-types.type';
 
 export interface Berry {
   firmness: NamedAPIResource;
-  flavors: Flavor[];
+  flavors: BerryFlavorMap[];
   growth_time: number;
   id: number;
   item: NamedAPIResource;
@@ -15,7 +15,7 @@ export interface Berry {
   soil_dryness: number;
 }
 
-interface Flavor {
+interface BerryFlavorMap {
   flavor: NamedAPIResource;
   potency: number;
 }

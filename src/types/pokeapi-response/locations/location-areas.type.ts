@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource, VersionEncounterDetail } from '../common-types.type';
 
-export interface LocationAreas {
+export interface LocationArea {
   encounter_method_rates: EncounterMethodRate[];
   game_index: number;
   id: number;
@@ -12,10 +12,10 @@ export interface LocationAreas {
 
 interface EncounterMethodRate {
   encounter_method: NamedAPIResource;
-  version_details: EncounterMethodRateVersionDetail[];
+  version_details: EncounterVersionDetail[];
 }
 
-interface EncounterMethodRateVersionDetail {
+interface EncounterVersionDetail {
   rate: number;
   version: NamedAPIResource;
 }

@@ -1,6 +1,6 @@
 import type { Name, NamedAPIResource } from '../common-types.type';
 
-export interface Generations {
+export interface Generation {
   abilities: NamedAPIResource[];
   id: number;
   main_region: NamedAPIResource;
