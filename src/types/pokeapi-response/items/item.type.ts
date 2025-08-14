@@ -1,11 +1,11 @@
-import type { APIResource, GenerationGameIndex, MachineVersionDetail, Name, NamedAPIResource, VersionGroupFlavorText } from '../common-types.type';
+import type { APIResource, GenerationGameIndex, MachineVersionDetail, Name, NamedAPIResource, VerboseEffect, VersionGroupFlavorText } from '../common-types.type';
 
 export interface Item {
   attributes: NamedAPIResource[];
   baby_trigger_for: APIResource | null;
   category: NamedAPIResource;
   cost: number;
-  effect_entries: EffectEntry[];
+  effect_entries: VerboseEffect[];
   flavor_text_entries: VersionGroupFlavorText[];
   fling_effect: NamedAPIResource | null;
   fling_power: number | null;
@@ -16,12 +16,6 @@ export interface Item {
   name: string;
   names: Name[];
   sprites: Sprites;
-}
-
-interface EffectEntry {
-  effect: string;
-  language: NamedAPIResource;
-  short_effect: string;
 }
 
 interface HeldByPokemon {

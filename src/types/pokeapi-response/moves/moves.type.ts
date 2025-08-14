@@ -1,4 +1,4 @@
-import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, Name, NamedAPIResource } from '../common-types.type';
+import type { APIResource, FlavorTextVersionGroup, MachineVersionDetail, Name, NamedAPIResource, VerboseEffect } from '../common-types.type';
 
 export interface Moves {
   accuracy: number | null;
@@ -8,7 +8,7 @@ export interface Moves {
   damage_class: NamedAPIResource;
   effect_chance: number | null;
   effect_changes: EffectChange[];
-  effect_entries: MoveEffectEntry[];
+  effect_entries: VerboseEffect[];
   flavor_text_entries: FlavorTextVersionGroup[];
   generation: NamedAPIResource;
   id: number;
@@ -47,12 +47,6 @@ interface EffectChangeEffectEntry {
   language: NamedAPIResource;
 }
 
-interface MoveEffectEntry {
-  effect: string;
-  language: NamedAPIResource;
-  short_effect: string;
-}
-
 interface Meta {
   ailment: NamedAPIResource;
   ailment_chance: number;
@@ -71,7 +65,7 @@ interface Meta {
 interface PastValue {
   accuracy: number | null;
   effect_chance: number | null;
-  effect_entries: MoveEffectEntry[];
+  effect_entries: VerboseEffect[];
   power: number | null;
   pp: number | null;
   type: NamedAPIResource | null;

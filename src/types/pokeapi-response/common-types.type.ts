@@ -16,12 +16,6 @@ export interface Effect {
   language: NamedAPIResource;
 }
 
-export interface VersionEncounterDetail {
-  encounter_details: Encounter[];
-  max_chance: number;
-  version: NamedAPIResource;
-}
-
 export interface Encounter {
   chance: number;
   condition_values: NamedAPIResource[];
@@ -66,4 +60,16 @@ export interface MachineVersionDetail {
 export interface Name {
   language: NamedAPIResource;
   name: string;
+}
+
+export interface VerboseEffect {
+  effect: string;
+  language: NamedAPIResource;
+  short_effect: string;
+}
+
+export interface VersionEncounterDetail {
+  encounter_details: Encounter[];
+  max_chance: number;
+  version: NamedAPIResource;
 }
